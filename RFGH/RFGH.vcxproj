@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{482BABFE-D4BC-4D8E-8CF5-E74CBCEE0BBC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RFGH</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)Dependencies\;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\;$(SolutionDir)Dependencies\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;RFGH_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;RFGH_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;RFGH_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;RFGH_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Config.cpp" />
+    <ClCompile Include="Source\Debug.cpp" />
+    <ClCompile Include="Source\Features\Combat\Aimbot.cpp" />
+    <ClCompile Include="Source\Features\Combat\Triggerbot.cpp" />
+    <ClCompile Include="Source\Features\Visuals\ESP.cpp" />
+    <ClCompile Include="Source\Features\Visuals\Glow.cpp" />
+    <ClCompile Include="Source\Features\Miscellaneous\Auto Jump.cpp" />
+    <ClCompile Include="Source\Features\Visuals\Miscellaneous.cpp" />
+    <ClCompile Include="Source\Files.cpp" />
+    <ClCompile Include="Source\Hooks.cpp" />
+    <ClCompile Include="Source\Input.cpp" />
+    <ClCompile Include="Source\Menu.cpp" />
+    <ClCompile Include="Source\RFGH.cpp" />
+    <ClCompile Include="Source\SDK\SDK.cpp" />
+    <ClCompile Include="Source\SDK\Utilities.cpp" />
+    <ClCompile Include="Source\SDK\Valve\checksum_crc.cpp" />
+    <ClCompile Include="Source\SDK\Valve\Color.cpp" />
+    <ClCompile Include="Source\SDK\Valve\Vector2D.cpp" />
+    <ClCompile Include="Source\SDK\Valve\VMatrix.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Config.hpp" />
+    <ClInclude Include="Source\Features\Combat\Aimbot.hpp" />
+    <ClInclude Include="Source\Features\Combat\Triggerbot.hpp" />
+    <ClInclude Include="Source\Features\Visuals\ESP.hpp" />
+    <ClInclude Include="Source\Features\Visuals\Glow.hpp" />
+    <ClInclude Include="Source\Features\Features.hpp" />
+    <ClInclude Include="Source\Features\Miscellaneous\Auto Jump.hpp" />
+    <ClInclude Include="Source\Features\Visuals\Miscellaneous.hpp" />
+    <ClInclude Include="Source\Files.hpp" />
+    <ClInclude Include="Source\Hooks.hpp" />
+    <ClInclude Include="Source\Input.hpp" />
+    <ClInclude Include="Source\Menu.hpp" />
+    <ClInclude Include="Source\RFGH.hpp" />
+    <ClInclude Include="Source\SDK\SDK.hpp" />
+    <ClInclude Include="Source\SDK\Utilities.hpp" />
+    <ClInclude Include="Source\SDK\Valve\CClientState.hpp" />
+    <ClInclude Include="Source\SDK\Valve\CCSWeaponData.hpp" />
+    <ClInclude Include="Source\SDK\Valve\checksum_crc.hpp" />
+    <ClInclude Include="Source\SDK\Valve\Enumerations.hpp" />
+    <ClInclude Include="Source\SDK\Valve\GlobalVars.hpp" />
+    <ClInclude Include="Source\SDK\Valve\Color.hpp" />
+    <ClInclude Include="Source\SDK\Valve\Glow.hpp" />
+    <ClInclude Include="Source\SDK\Valve\IAppSystem.hpp" />
+    <ClInclude Include="Source\SDK\Valve\IClientEntity.hpp" />
+    <ClInclude Include="Source\SDK\Valve\IClientEntityList.hpp" />
+    <ClInclude Include="Source\SDK\Valve\IClientNetworkable.hpp" />
+    <ClInclude Include="Source\SDK\Valve\IClientRenderable.hpp" />
+    <ClInclude Include="Source\SDK\Valve\IClientThinkable.hpp" />
+    <ClInclude Include="Source\SDK\Valve\IClientUnknown.hpp" />
+    <ClInclude Include="Source\SDK\Valve\ICollideable.hpp" />
+    <ClInclude Include="Source\SDK\Valve\IEngineTrace.hpp" />
+    <ClInclude Include="Source\SDK\Valve\IHandleEntity.hpp" />
+    <ClInclude Include="Source\SDK\Valve\IPanel.hpp" />
+    <ClInclude Include="Source\SDK\Valve\ISurface.hpp" />
+    <ClInclude Include="Source\SDK\Valve\IVEngineClient.hpp" />
+    <ClInclude Include="Source\SDK\Valve\IVModelInfoClient.hpp" />
+    <ClInclude Include="Source\SDK\Valve\QAngle.hpp" />
+    <ClInclude Include="Source\SDK\Valve\Studio.hpp" />
+    <ClInclude Include="Source\SDK\Valve\UserCmd.hpp" />
+    <ClInclude Include="Source\SDK\Valve\Valve.hpp" />
+    <ClInclude Include="Source\SDK\Valve\Vector.hpp" />
+    <ClInclude Include="Source\SDK\Valve\Vector2D.hpp" />
+    <ClInclude Include="Source\SDK\Valve\VMatrix.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Debug.hpp" />
+    <None Include="Source\Menu.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
